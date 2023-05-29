@@ -97,6 +97,7 @@ func LoginHandler(w http.ResponseWriter, r *http.Request) {
 
 	tokenString, err := token.SignedString(jwtToken)
 
+	
 	if err != nil{
 		w.WriteHeader(http.StatusInternalServerError)
 		return
